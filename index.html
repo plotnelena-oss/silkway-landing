@@ -57,11 +57,9 @@ nav.top{position:sticky;top:0;z-index:50;padding:14px 0;background:rgba(255,255,
 .nav-geo{font-size:12px;color:var(--ink-mute);letter-spacing:.06em}
 .nav-geo b{color:var(--ink);font-weight:600}
 .logo{display:flex;align-items:center;gap:12px}
-.logo-mark{width:44px;height:44px;flex-shrink:0}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-text .name{font-weight:800;font-size:16px;letter-spacing:.04em;color:var(--ink)}
-.logo-text .name span{background:linear-gradient(90deg,#a855f7,#3b82f6,#10b981,#facc15,#f97316,#ef4444);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:hlsilk 14s linear infinite}
-.logo-text .tag{font-size:10px;color:var(--ink-mute);letter-spacing:.18em;margin-top:4px;text-transform:uppercase}
+.logo-img{height:60px;width:auto;display:block;border-radius:10px;box-shadow:0 6px 20px rgba(6,78,59,.18),0 1px 0 rgba(255,255,255,.5) inset;transition:transform .25s var(--ease)}
+.logo:hover .logo-img{transform:translateY(-1px) scale(1.02)}
+footer .logo-img{box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.06)}
 
 /* HERO */
 .hero{padding:56px 0 80px;position:relative}
@@ -338,35 +336,7 @@ footer{padding:48px 0 32px;background:var(--bg-dark);color:var(--ink-on-dark-sof
 <nav class="top">
   <div class="wrap nav-row">
     <a href="#" class="logo">
-      <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="silk1" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#c084fc"/><stop offset="20%" stop-color="#60a5fa"/>
-            <stop offset="40%" stop-color="#34d399"/><stop offset="60%" stop-color="#fde047"/>
-            <stop offset="80%" stop-color="#fb923c"/><stop offset="100%" stop-color="#f87171"/>
-          </linearGradient>
-          <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#fef9c3"/>
-            <stop offset="40%" stop-color="#fde047"/>
-            <stop offset="80%" stop-color="#facc15"/>
-            <stop offset="100%" stop-color="#eab308"/>
-          </linearGradient>
-          <filter id="glowg"><feGaussianBlur stdDeviation="0.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <path d="M3 48 Q22 36 32 42 T61 50" fill="none" stroke="url(#silk1)" stroke-width="3.6" stroke-linecap="round" opacity="1"/>
-        <path d="M3 53 Q22 41 32 47 T61 55" fill="none" stroke="url(#silk1)" stroke-width="2.2" stroke-linecap="round" opacity=".75"/>
-        <g transform="translate(20,16)" fill="url(#goldg)" filter="url(#glowg)">
-          <rect x="3" y="18" width="2.2" height="9" rx="1"/><rect x="9" y="18" width="2.2" height="9" rx="1"/>
-          <rect x="16" y="18" width="2.2" height="9" rx="1"/><rect x="22" y="18" width="2.2" height="9" rx="1"/>
-          <path d="M2 18 Q3 12 8 11 Q11 6 14 11 Q18 6 21 11 Q26 12 26 18 Z"/>
-          <path d="M22 12 Q26 6 28 2 Q30 1 31 2 Q31.5 3 30.5 4 Q31 5 31 6.5 Q30 8 28 8.5 Q27 11 25 12 Z"/>
-        </g>
-        <g transform="translate(50,11)" fill="url(#goldg)" filter="url(#glowg)"><path d="M0 -5 L1.2 -1.2 L5 0 L1.2 1.2 L0 5 L-1.2 1.2 L-5 0 L-1.2 -1.2 Z"/></g>
-      </svg>
-      <div class="logo-text">
-        <div class="name">SILK <span>WAY</span> COLOR</div>
-        <div class="tag">On Time. Every Time.</div>
-      </div>
+      <img class="logo-img" src="assets/logo.jpg" alt="Silk Way Color — On Time. Every Time.">
     </a>
     <div class="nav-geo">
       <b>Узбекистан</b>, Таджикистан, Казахстан
@@ -744,17 +714,7 @@ footer{padding:48px 0 32px;background:var(--bg-dark);color:var(--ink-on-dark-sof
     <div class="foot-row">
       <div style="max-width:340px">
         <a href="#" class="logo" style="margin-bottom:14px">
-          <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="silk2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a855f7"/><stop offset="20%" stop-color="#3b82f6"/><stop offset="40%" stop-color="#10b981"/><stop offset="60%" stop-color="#facc15"/><stop offset="80%" stop-color="#f97316"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
-              <linearGradient id="goldg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fde68a"/><stop offset="100%" stop-color="#a16207"/></linearGradient>
-            </defs>
-            <path d="M3 48 Q22 36 32 42 T61 50" fill="none" stroke="url(#silk2)" stroke-width="3.2" stroke-linecap="round" opacity=".9"/>
-            <path d="M3 53 Q22 41 32 47 T61 55" fill="none" stroke="url(#silk2)" stroke-width="2" stroke-linecap="round" opacity=".55"/>
-            <g transform="translate(20,16)" fill="url(#goldg2)"><rect x="3" y="18" width="2.2" height="9" rx="1"/><rect x="9" y="18" width="2.2" height="9" rx="1"/><rect x="16" y="18" width="2.2" height="9" rx="1"/><rect x="22" y="18" width="2.2" height="9" rx="1"/><path d="M2 18 Q3 12 8 11 Q11 6 14 11 Q18 6 21 11 Q26 12 26 18 Z"/><path d="M22 12 Q26 6 28 2 Q30 1 31 2 Q31.5 3 30.5 4 Q31 5 31 6.5 Q30 8 28 8.5 Q27 11 25 12 Z"/></g>
-            <g transform="translate(48,12)" fill="url(#goldg2)"><path d="M0 -4 L1 -1 L4 0 L1 1 L0 4 L-1 1 L-4 0 L-1 -1 Z"/></g>
-          </svg>
-          <div class="logo-text"><div class="name" style="color:#fff">SILK<span>WAY</span></div><div class="tag">Poytaxt Group</div></div>
+          <img class="logo-img" src="assets/logo.jpg" alt="Silk Way Color">
         </a>
       </div>
       <div class="foot-col"><h5>География</h5><span style="display:block;padding:5px 0">Узбекистан</span><span style="display:block;padding:5px 0">Таджикистан</span><span style="display:block;padding:5px 0">Казахстан</span></div>
