@@ -135,11 +135,13 @@ section{padding:80px 0;position:relative}
 
 /* BENEFITS list (6 bullets) */
 .ben-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.ben{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--r-sm);padding:22px 24px;display:flex;gap:16px;align-items:flex-start;transition:all .25s var(--ease)}
-.ben:hover{border-color:var(--gold);box-shadow:0 10px 28px rgba(250,204,21,.18)}
-.ben-check{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#fde047,#facc15);display:grid;place-items:center;flex-shrink:0;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
-.ben-check svg{width:16px;height:16px;color:var(--ink)}
-.ben p{font-size:15px;color:var(--ink-soft);line-height:1.55;margin:0}
+.ben{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;transition:all .25s var(--ease)}
+.ben:hover{border-color:var(--gold);box-shadow:0 14px 36px rgba(250,204,21,.16);transform:translateY(-2px)}
+.ben-check{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#fde047,#facc15);display:grid;place-items:center;flex-shrink:0;box-shadow:0 4px 12px rgba(250,204,21,.35),0 1px 0 rgba(255,255,255,.6) inset}
+.ben-check svg{width:18px;height:18px;color:var(--ink)}
+.ben-body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.ben-body h4{font-size:17px;font-weight:800;color:var(--ink);margin:0;line-height:1.3;letter-spacing:-.01em}
+.ben-body p{font-size:14.5px;color:var(--ink-mute);line-height:1.55;margin:0}
 
 /* MARKET CONTEXT */
 .market-quote{
@@ -461,12 +463,12 @@ footer{padding:48px 0 32px;background:var(--bg-dark);color:var(--ink-on-dark-sof
       <h2>Вот что вы получаете, работая с нами</h2>
     </div>
     <div class="ben-grid">
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Самую выгодную цену. Если найдете конкурента, у которого цена ниже на подобный формат, мы пересмотрим условия.</p></div>
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Заказ уходит в печать в день обращения. Три флотовки и отдельная для клиентов Silkway — без очередей и потери времени.</p></div>
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Коробку любого размера печатаем на одном листе. Большие форматы печатаем без склейки и швов. Экономит время на сборке и снижает расходы.</p></div>
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Цвет партии совпадает с предыдущей за счет высокой точности станка и автоматического контроля. Исключает ошибку.</p></div>
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Платите за расход краски, а не за лист — затраты на печать сокращаются до 50%.</p></div>
-      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Бумагу можно купить здесь же. Не нужно отдельно закупать, везти, контролировать. Разместили заказ, и через 72 часа забрали готовые отпечатанные листы.</p></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Самую выгодную цену</h4><p>Если найдете конкурента, у которого цена ниже на подобный формат, мы пересмотрим условия.</p></div></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Заказ уходит в печать в день обращения</h4><p>Три флотовки и отдельная для клиентов Silkway — без очередей и потери времени.</p></div></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Коробку любого размера печатаем на одном листе</h4><p>Большие форматы печатаем без склейки и швов. Экономит время на сборке и снижает расходы.</p></div></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Цвет партии совпадает с предыдущей</h4><p>За счёт высокой точности станка и автоматического контроля. Исключает ошибку.</p></div></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Платите за расход краски, а не за лист</h4><p>Затраты на печать сокращаются до 50%.</p></div></div>
+      <div class="ben"><div class="ben-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ben-body"><h4>Бумагу можно купить здесь же</h4><p>Не нужно отдельно закупать, везти, контролировать. Разместили заказ — через 72 часа забрали готовые отпечатанные листы.</p></div></div>
     </div>
   </div>
 </section>
