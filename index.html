@@ -156,10 +156,11 @@ section{padding:80px 0;position:relative}
 /* PROBLEMS BLOCK */
 .problems{display:grid;grid-template-columns:1fr;gap:30px;margin-top:48px;max-width:1000px;margin-left:auto;margin-right:auto}
 .problem{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px}
-.problem-img{border-radius:14px;background:#fff;position:relative;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 18px rgba(15,20,24,.06)}
-.problem-img img{width:100%;height:auto;display:block}
-.problem-img .ph-fallback{padding:60px 20px;text-align:center;font-size:11px;letter-spacing:.1em;line-height:1.5;background:linear-gradient(135deg,#1a2026,#0a0d12);color:rgba(255,255,255,.4);width:100%}
-.problem-img .ph-fallback::before{content:"💬";display:block;font-size:32px;margin-bottom:10px;opacity:.7}
+.problem-chat{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.problem-chat>.phone-img{min-width:0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(15,20,24,.06)}
+.problem-chat>.phone-img img{width:100%;height:auto;display:block}
+.problem-chat>.vs{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#fde047,#facc15,#eab308);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:13px;letter-spacing:.06em;box-shadow:0 8px 22px rgba(250,204,21,.45),0 1px 0 rgba(255,255,255,.5) inset;flex-shrink:0}
+@media (max-width:760px){.problem-chat{grid-template-columns:1fr;gap:10px}.problem-chat>.vs{justify-self:center}}
 .problem-issue{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
 .problem-issue b{color:var(--ink)}
 .problem-our{margin-top:auto;padding:14px 16px;background:linear-gradient(135deg,#fefce8,#fef3c7);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;font-size:15px;color:var(--ink);line-height:1.55}
@@ -483,17 +484,19 @@ footer{padding:48px 0 32px;background:var(--bg-dark);color:var(--ink-on-dark-sof
 
     <div class="problems">
       <div class="problem">
-        <div class="problem-img">
-          <img src="assets/chat-deadline.jpg" alt="Скрин переписки: срыв сроков" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-          <div class="ph-fallback" style="display:none">Скрин переписки<br>о срыве сроков<br><br>assets/chat-deadline.jpg</div>
+        <div class="problem-chat">
+          <div class="phone-img"><img src="assets/chat-deadline-bad.jpg" alt="Обычная типография — срыв сроков"></div>
+          <div class="vs">VS</div>
+          <div class="phone-img"><img src="assets/chat-deadline-good.jpg" alt="Silk Way Color — заказ в срок"></div>
         </div>
         <div class="problem-our"><b>У нас срок 72 часа фиксируется в договоре.</b></div>
       </div>
       <div class="problem">
         <div class="problem-issue"><b>Страдает качество печати, всё больше ошибок.</b> То цвет не тот, отличается от макета и от предыдущей печати, то края размытые, то брак на листах.</div>
-        <div class="problem-img">
-          <img src="assets/chat-quality.jpg" alt="Скрин переписки: брак качества" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-          <div class="ph-fallback" style="display:none">Скрин переписки<br>о браке/качестве<br><br>assets/chat-quality.jpg</div>
+        <div class="problem-chat">
+          <div class="phone-img"><img src="assets/chat-quality-bad.jpg" alt="Обычная типография — брак"></div>
+          <div class="vs">VS</div>
+          <div class="phone-img"><img src="assets/chat-quality-good.jpg" alt="Silk Way Color — качество"></div>
         </div>
         <div class="problem-our">У нас все процессы автоматические. Исключен человеческий фактор. А в случае брака, мы возвращаем деньги за печать и бумагу. Даем гарантию, потому что уверены, что это вероятность мизерная.</div>
       </div>
